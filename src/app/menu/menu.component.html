@@ -1,0 +1,27 @@
+<div class='header'>
+	<div class='menu_title'> Mercury</div>
+	<div class='icon_wrapper' (click)='openMenu()'>
+		<div class='icon'></div>
+		<div class='icon'></div>
+		<div class='icon'></div>
+	</div>
+
+</div>
+<div class='main-container'>
+	<div class='menu-container'>
+			
+			<div class='menu_item' *ngFor='let item of items'
+			 	(click)='getSelectedPage(item)'
+			 	on-mouseover='getSelectedPage(item)'
+			 	[class.selected_item]='item===selected_item'>
+					<div class='content'><span [class.selected_item]='item===selected_item'> </span>{{item}}</div>
+
+			</div>
+		
+	</div>
+	<div class='page-container'>
+		
+	</div>
+</div>
+
+
